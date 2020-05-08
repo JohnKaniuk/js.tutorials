@@ -22,8 +22,4 @@ let makeGuess = function(guess) {
 
     return guess === randomNum
 }
-        
-
-
-
-console.log(makeGuess(1))
+    console.log(makeGuess(1))

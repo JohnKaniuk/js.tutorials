@@ -1,8 +1,8 @@
 //challenge video
 // 15/20 -you got a c (75%)
 // 90-100 A 80-89B 79-70C 69-60D
-let earned = 8 
-let out_of = 20
+const earned = 8 
+const out_of = 20
 let percent = (earned/out_of) * 100
 
 
