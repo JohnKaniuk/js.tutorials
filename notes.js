@@ -1,16 +1,44 @@
-const notes = [{}, {
+const notes = [{
     title: 'my next trip',
-    body: 'i would like to go to japan', 
-}, {
-    title : "habits id like to improve",
+    body: 'i would like to go to japan' 
+    }, {
+    title : 'habits id like to improve',
     body: 'excercise more'
-}, {
+    }, {
     title: 'office modification',
     body: 'get office chair'
 
-}]
+    }
+]
+const findNote = function(notes, noteTitle) {
+    
+   return notes.find(function (note, index) {
+          return notes.title.toLowerCase() === noteTitle.toLowerCase()
+      })
+     
 
- //console.log(notes.pop(1))
+// const findNote = function(notes, noteTitle) {
+//   const index = notes.findIndex(function (note, index) {
+//         return notes.title.toLowerCase() === noteTitle.toLowerCase()
+//     })
+//     return notes[index]
+}
+
+const note = findNote(notes, 'office modification')
+console.log(note)
+
+
+
+
+
+
+
+
+
+
+
+
+//console.log(notes.pop(1))
 // notes.push('Note 4 new')
 
 // console.log(notes.shift())
@@ -26,11 +54,3 @@ const notes = [{}, {
 //     console.log(item)
 //     console.log(index)
 // })
-console.log(notes.length)
-console.log(notes)
-
-const index = notes.findIndex(function(note, index){
-    console.log(note)
-    return note.title === 'habits id like to improve'
-})
-console.log(index)

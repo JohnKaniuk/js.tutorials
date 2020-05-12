@@ -22,7 +22,19 @@ for (let count = 0; count<= todos.length;count++){
     const todo = todos
     console.log(`${num} ${todo}`)
 }
+notes[2] = 'This is new note 3'
+notes.forEach(function(item, index){
+    console.log(item)
+    console.log(index)
+})
+//counting... 1 ,2, 3
+for (let count = 2; count>= 0; count--){
+    console.log(count)
+}
 
+for (let count =notes.length -1; count >= 0; count--){
+    console.log(notes[count])
+}
 
 
 
