@@ -9,26 +9,34 @@ const todos = [{
      comepleted: false
     },{ 
      name :'do coding',
-     comepleted: true
+     comepleted: false
     },{
      name : 'play some games',
-     comepleted: false
+     comepleted: true
     }]
 
-    const deleteTodo = function (todos, todoText){
-        const index = todos.findIndex(function (todo) {
-            return todos.text === todoText
-        })
+// const deleteTodo = function (todos, todoText){
+//     const index = todos.findIndex(function (something) {
+//         return something.name.toLowerCase() === todoText.toLowerCase()
+//     })
 
-        if (index > -1){
-         (completed === true)
-        } {
-            todos.splice(index, 2)
-        }
-    }
+//     if (index > -1){
+//         todos.splice(index, 1)
+//     }
+// }
+
+const getThingsToDo = function (todos){
+    return todos.filter(function(todo){
+  return todo.completed === false
     
-    deleteTodo(todos,'do coding')
-    console.log(todos)
+    })
+}
+
+
+console.log(getThingsToDo(todos))
+// deleteTodo(todos, "do coding")
+// console.log(todos)
+
     
     
 

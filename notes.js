@@ -10,23 +10,37 @@ const notes = [{
 
     }
 ]
-const findNote = function(notes, noteTitle) {
+// const findNote = function(notes, noteTitle) {
     
-   return notes.find(function (note, index) {
-          return notes.title.toLowerCase() === noteTitle.toLowerCase()
-      })
-     
+//    return notes.find(function (note, index) {
+//           return notes.title.toLowerCase() === noteTitle.toLowerCase()
+//       })
+// }
+
+const findNotes = function (notes, query){
+    return notes.filter(function(note, index){
+        const isTitleMatch = note.title.includes(query)
+        const isBodyMatch = note.body.includes(query)
+         return isTitleMatch || isBodyMatch
+     })
+}
+
+
+// const filteredNotes = notes.filter(function(note, index){
+//    const isTitleMatch = note.title.includes('office')
+//    const isBodyMatch = note.body.includes('office')
+//     return isTitleMatch || isBodyMatch
+// })
+console.log(findNotes(notes, 'habits'))
+//const note = findNote(notes, 'office modification')
+//console.log(note)
 
 // const findNote = function(notes, noteTitle) {
 //   const index = notes.findIndex(function (note, index) {
 //         return notes.title.toLowerCase() === noteTitle.toLowerCase()
 //     })
 //     return notes[index]
-}
-
-const note = findNote(notes, 'office modification')
-console.log(note)
-
+//}
 
 
 
