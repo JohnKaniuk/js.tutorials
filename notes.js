@@ -7,9 +7,22 @@ const notes = [{
     }, {
     title: 'office modification',
     body: 'get office chair'
-
     }
 ]
+
+const sortNotes = function(notes) {
+    notes.sort(function (a, b) {
+        if (a.title.toLowerCase() < b.title.toLowerCase()) {
+            return -1
+        } else if(b.title.toLowerCase() < a.title.toLowerCase()) {
+            return 1
+        } else{
+            return 0
+        }
+    })
+}
+sortNotes(notes)
+console.log(notes)
 // const findNote = function(notes, noteTitle) {
     
 //    return notes.find(function (note, index) {
@@ -17,13 +30,13 @@ const notes = [{
 //       })
 // }
 
-const findNotes = function (notes, query){
-    return notes.filter(function(note, index){
-        const isTitleMatch = note.title.includes(query)
-        const isBodyMatch = note.body.includes(query)
-         return isTitleMatch || isBodyMatch
-     })
-}
+// const findNotes = function (notes, query){
+//     return notes.filter(function(note, index){
+//         const isTitleMatch = note.title.includes(query)
+//         const isBodyMatch = note.body.includes(query)
+//          return isTitleMatch || isBodyMatch
+//      })
+// }
 
 
 // const filteredNotes = notes.filter(function(note, index){
@@ -31,7 +44,7 @@ const findNotes = function (notes, query){
 //    const isBodyMatch = note.body.includes('office')
 //     return isTitleMatch || isBodyMatch
 // })
-console.log(findNotes(notes, 'habits'))
+// console.log(findNotes(notes, 'habits'))
 //const note = findNote(notes, 'office modification')
 //console.log(note)
 

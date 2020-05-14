@@ -15,7 +15,41 @@ const todos = [{
      comepleted: true
     }]
 
-// const deleteTodo = function (todos, todoText){
+// const sortTodos = function(todos) {
+//   notes.sort(function(a, b) {
+//     if (notes.completed = false){
+//       return -1
+//     } 
+//       else if (notes.completed = false){
+//         return 1
+//       } else {
+//         return 0
+//       }
+//     })
+// }
+const sortTodos = function(todos) {
+  todos.sort(function(a, b){
+    if (!a.completed && b.completed){
+      return -1
+    } else if (!b.completed && a.completed){
+      return 1
+    } else {
+      return 0
+    }
+  })
+}
+
+
+sortTodos(todos)
+console.log(todos)
+
+
+
+
+
+
+
+    // const deleteTodo = function (todos, todoText){
 //     const index = todos.findIndex(function (something) {
 //         return something.name.toLowerCase() === todoText.toLowerCase()
 //     })
@@ -25,15 +59,15 @@ const todos = [{
 //     }
 // }
 
-const getThingsToDo = function (todos){
-    return todos.filter(function(todo){
-  return todo.completed === false
+// const getThingsToDo = function (todos){
+//     return todos.filter(function(todo){
+//   return todo.completed === false
     
-    })
-}
+//     })
+// }
 
 
-console.log(getThingsToDo(todos))
+// console.log(getThingsToDo(todos))
 // deleteTodo(todos, "do coding")
 // console.log(todos)
 
