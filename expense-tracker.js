@@ -18,7 +18,7 @@ const account = {
      
     
      addExpense: function(description, amount){
-     this.expenses.push({
+     this.account.expenses.push({
          description: description,
          amount: amount
      })},
