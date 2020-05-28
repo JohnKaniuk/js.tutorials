@@ -22,23 +22,26 @@ const todos = [{
     comepleted: true
    }]
 
-   // you have 2 todos left
-   // add a p for each todo 
+//    you have 2 todos left
+//    add a p for each todo 
 //    const newParagraph = document.createElement('p')
 //    newParagraph.textContent = forEach(todos.name)
 //    document.querySelector('body').appendChild
-   //    const ps = document.querySelector(todos)
-//    paragraphs.forEach(function(){})
-const incompleteTodos = todos.filter(function(todo){
-    return !todo.comepleted
-})
+//    //    const ps = document.querySelector(todos)
+//     paragraphs.forEach(function(){})
+// const incompleteTodos = todos.filter(function(todo){
+//     return !todo.comepleted
+// })
 
-const summary = document.createElement('h2')
-summary.textContent = `you have ${incompleteTodos.length} todos left`
-document.querySelector('body').appendChild(summary)
+// const summary = document.createElement('h2')
+// summary.textContent = `you have ${incompleteTodos.length} todos left`
+// document.querySelector('body').appendChild(summary)
 
-todos.forEach(function(todos){
-    const p = document.createElement('p')
-    p.textContent= todos.text 
-    document.querySelector('body').appendChild(p)
+// todos.forEach(function(todos){
+//     const p = document.createElement('p')
+//     p.textContent= todos.text 
+//     document.querySelector('body').appendChild(p)
+// })
+document.querySelector('#hold-this').addEventListener('click', function(){
+    console.log('wow no chance it worked')
 })
