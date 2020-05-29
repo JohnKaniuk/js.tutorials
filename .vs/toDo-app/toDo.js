@@ -5,22 +5,22 @@
 //         paragraph.remove()
 //     }
 // })
-const todos = [{
-    name: 'walk the dog',
-    comepleted: false
-   },{
-    name :'brush my teeth',
-    comepleted: false
-   },{
-    name : 'go on a walk',
-    comepleted: true
-   },{ 
-    name :'do coding',
-    comepleted: true 
-   },{
-    name : 'play some games',
-    comepleted: true
-   }]
+// const todos = [{
+//     name: 'walk the dog',
+//     comepleted: false
+//    },{
+//     name :'brush my teeth',
+//     comepleted: false
+//    },{
+//     name : 'go on a walk',
+//     comepleted: true
+//    },{ 
+//     name :'do coding',
+//     comepleted: true 
+//    },{
+//     name : 'play some games',
+//     comepleted: true
+//    }]
 
 //    you have 2 todos left
 //    add a p for each todo 
@@ -42,6 +42,9 @@ const todos = [{
 //     p.textContent= todos.text 
 //     document.querySelector('body').appendChild(p)
 // })
-document.querySelector('#hold-this').addEventListener('click', function(){
-    console.log('wow no chance it worked')
+// document.querySelector('#hold-this').addEventListener('click', function(){
+//     console.log('wow no chance it worked')
+// })
+document.querySelector('#new-todo').addEventListener('input', function(e){
+    console.log(e.target.value)
 })

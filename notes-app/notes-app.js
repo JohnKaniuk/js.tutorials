@@ -26,6 +26,32 @@ const notes = [{
     body: 'get office chair'
     }
 ]
+
+const filters = {
+    searchText: ''
+}
+const renderNotes = function (notes, filters) {
+    const filteredNotes = notes.filter(function (note){
+        return note.title.toLowerCase().includes(filters.searchText.toLowerCase())
+        
+    })
+
+document.querySelector('#notes').innerHTML = '<p>TEST</p>'
+
+   filteredNotes.forEach(function(note){
+       const noteEl = document.createElement('p')
+       noteEl.textContent = note.title
+       document.querySelector('#notes').appendChild(noteEl)
+   })
+
+}
+
+
+renderNotes(notes, filters)
+
+
+
+
 document.querySelector('#create-notes').addEventListener('click',function(e){
     console.log('did this work')
     e.target.textContent = "The button was clicked"
@@ -36,15 +62,7 @@ document.querySelector('button#remove-all').addEventListener('click', function()
     })
 })
 
-//selection tools
-
-// --single--
-// p
-// #replace (id = # )
-// .item (class = . )
-
-// --multiple--
-//p#order
-// button.inventory
-// h1#title.application
-// h1.application#title
+document.querySelector('#search-text').addEventListener('input', function(e){
+    filters.searchText = e.target.value
+    renderNotes(notes, filters)
+})
