@@ -56,11 +56,11 @@ document.querySelector('#create-notes').addEventListener('click',function(e){
     console.log('did this work')
     e.target.textContent = "The button was clicked"
 })
-document.querySelector('button#remove-all').addEventListener('click', function(){
-    document.querySelectorAll('.note').forEach(function(note) {
-        note.remove()
-    })
-})
+// document.querySelector('button#remove-all').addEventListener('click', function(){
+//     document.querySelectorAll('.note').forEach(function(note) {
+//         note.remove()
+//     })
+// })
 
 document.querySelector('#search-text').addEventListener('input', function(e){
     filters.searchText = e.target.value
