@@ -75,3 +75,8 @@ document.querySelector('#search-text').addEventListener('click', function(e){
     filters.searchText = e.target.value
     renderTodos(todos, filters)
 })
+
+document.querySelector('#name-form').addEventListener('submit', function(e){
+    e.preventDefault()
+    e.target.elements.name-form.value = ''
+})
