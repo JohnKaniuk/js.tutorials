@@ -4,20 +4,18 @@
     <head></head>
     <body>
         <h1>
-            Notes app to check stuff
+            Notes app 
         </h1>
         <h2>Take notes and never forget</h2>
         <input id="search-text" type="text" placeholder="Filter-todos">
-        <input id="new-note" type="text" placeholder="New note">
-        <div id="notes">
-
-        </div>
-        <form>
-            <input type = 'text' placeholder='First Name' name='name-form'>
-            <button>Submit</button>
-        </form>
-        <button id="create-notes">Create note</button>
+        <select id='filter-by'>
+            <option value="byEdited">Sort by last edited</option>
+            <option value="byCreated">Sort by recently created</option>
+            <option value="alphabetical">Sort alphabetically</option>
+        </select>
+        <div id="notes"></div>
+       <button id="create-notes">Create note</button>
        
-        <script src="notes-app.js"></script>
+       <script src="notes-app.js"></script>
     </body>
 </html>

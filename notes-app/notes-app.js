@@ -1,20 +1,3 @@
-// // DOM - document object model
-
-// // const p= document.querySelector('p')
-// // p.remove()
-// //query all and remove
-// const ps = document.querySelectorAll('p')
-
-// ps.forEach(function (p){
-//    p.textContent= '**********'
-//     //console.log(p.textContent)
-//     //p.remove()
-// })
-
-// add a new element
-// const newParagraph = document.createElement('p')
-// newParagraph.textContent = 'This is a new element from Javascript'
-// document.querySelector('body').appendChild(newParagraph)
 const notes = [{
     title: 'my next trip',
     body: 'i would like to go to japan' 
@@ -29,6 +12,7 @@ const notes = [{
 
 const filters = {
     searchText: ''
+    
 }
 const renderNotes = function (notes, filters) {
     const filteredNotes = notes.filter(function (note){
@@ -36,7 +20,8 @@ const renderNotes = function (notes, filters) {
         
     })
 
-document.querySelector('#notes').innerHTML = '<p>TEST</p>'
+    
+document.querySelector('#notes').innerHTML = ''
 
    filteredNotes.forEach(function(note){
        const noteEl = document.createElement('p')
@@ -62,7 +47,6 @@ document.querySelector('#search-text').addEventListener('input', function(e){
     renderNotes(notes, filters)
 })
 
-document.querySelector('#name-form').addEventListener('submit', function(e){
-    e.preventDefault()
-    e.target.elements.firstName.value = ''
+document.querySelector('#filter-by').addEventListener('change', function(e){
+    console.log(e.target.value)
 })
