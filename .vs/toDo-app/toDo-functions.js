@@ -16,7 +16,7 @@ const renderTodos = function(todos, filters) {
     const filteredTodos = todos.filter(function (todo) {
         const searchTextMatch = todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
         const hideCompletedMatch = !filters.hideCompleted || !todo.completed
-        debugger 
+       
         return searchTextMatch && hideCompletedMatch
     })
 
@@ -36,13 +36,23 @@ const renderTodos = function(todos, filters) {
 
 //get dom elements for an individual note
 const generateTodoDOM = function (todo){
-    const noteEl = document.createElement('div')
-    const todoEl = document.createElement('span')
-    const checkbox = document.createElement('checkbox')
-   
-    const p = document.createElement('p')
-        p.textContent = todo.text
-        return p
+    const todoEl =document.createElement('div')
+    const checkbox = document.createElement('input')
+    const todotext =document.createElement('span')
+    const removeButton = document.createElement('button')
+
+    //setup todo checkbox
+    checkbox.setAttribute('type', 'checkbox')
+    todoEl.appendChild(checkbox)
+
+    //setup todo text
+    todotext.textContent = todo.text
+    todoEl.appendChild(todotext)
+
+//setup remove button
+    removeButton.textContent = 'x'
+    todoEl.appendChild(removeButton)
+    return todoEl
 }
 //get the dom elements for a list summary
 const generateSummaryDOM = function (incompleteTodos){

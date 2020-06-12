@@ -1,3 +1,4 @@
+
 //read existing notes from local storage
 const getSavedNotes = function (){
     //check for existing saved data
