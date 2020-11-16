@@ -20,7 +20,7 @@ const filters = {
 
 const userJSON = localStorage.getItem('user')
 const user = JSON.parse(userJSON)
-console.log(`${user.name} is ${user.age} years old`)
+//console.log(`${user.name} is ${user.age} years old`)
 
 
 
