@@ -77,4 +77,11 @@ const newParagraph = document.createElement('p')
 newParagraph.textContent = 'God this is going to be hard to remember'
 document.querySelector('body').appendChild(newParagraph)
 
+const newerParagraph = document.createElement('p')
+newerParagraph.textContent = "How do i relearn all of this"
+document.querySelector('body').appendChild(newerParagraph)
+
+const newestButton = createElement('button')
+addEventListener('click').appendChild(newestButton)
+
 
