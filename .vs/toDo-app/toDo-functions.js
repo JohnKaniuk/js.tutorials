@@ -1,3 +1,5 @@
+
+
 // get saved todos
 const getSavedTodos = function(todos){
     const todosJSON = localStorage.getItem('todos')
@@ -41,10 +43,23 @@ const removeTodo = function(id){
         }
     })
 }
+
+//Toggle the completed value for a todo
+const toggleTodo = function (id){
+    const todo = todos.find(function(todo){
+        return todo.id === id 
+    })
+
+    if (todo !== undefined){
+        todo.completed = !todo.completed
+    }
+}
 //get dom elements for an individual note
 const generateTodoDOM = function (todo){
     const todoEl =document.createElement('div')
     const checkbox = document.createElement('input')
+    checkbox.checked = todo.completed; // set the checkbox checked status directly to the true or false of completed
+    checkbox.checked = true ? todo.completed : checkbox.checked = false; // set the checkbox status based on a certain criteria we can create
     const todotext =document.createElement('span')
     const removeButton = document.createElement('button')
 
@@ -60,6 +75,11 @@ const generateTodoDOM = function (todo){
     //setup todo checkbox
     checkbox.setAttribute('type', 'checkbox')
     todoEl.appendChild(checkbox)
+    checkbox.addEventListener('change', function(){
+        toggleTodo(todo.id)
+        saveTodos(todos)
+        renderTodos(todos, filters)
+    })
 
     //setup todo text
     todotext.textContent = todo.text

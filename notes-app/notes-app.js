@@ -34,13 +34,14 @@ renderNotes(notes, filters)
 
 
 document.querySelector('#create-notes').addEventListener('click',function(e){
+    const id = uuidv4()
     notes.push({
-        id: uuidv4(),
+        id: id,
         title: '',
         body: ''
     })
     savedNotes(notes)
-    renderNotes(notes, filters)
+    location.assign(`/edit.html#${id}`)
 })
 
 document.querySelector('#search-text').addEventListener('input', function(e){
